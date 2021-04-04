@@ -1,3 +1,4 @@
+<<
 # kops-kubernetes-cluster-configuration
 # Landmark Technologies,  -    Landmark Technologies 
 # Tel: +1 437 215 2483,   -     +1 437 215 2483 
@@ -18,6 +19,8 @@
 6. KOPS create resources like: LoadBalancers, ASG, Launch Configuration, woker node Master node (CONTROL PLANE.
 
 7. KOPS is IaaC
+
+>>
 
 #!/bin/bash
 # 1) Create Ubuntu EC2 instance in AWS
@@ -45,7 +48,7 @@
  sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
  sudo chmod +x ./kubectl
  sudo mv ./kubectl /usr/local/bin/kubectl
- aws s3 mb s3://nubonglegah.k8.local
+ aws s3 mb s3://tnclass23.k8s.local
  aws s3 ls
 
 # 5) Create an IAM role from AWS Console or CLI with below Policies.
@@ -63,7 +66,7 @@ You Created. --> Save.
 
 # 6) create an S3 bucket Execute below commond in KOPS Server use unique bucket name if you get bucket name exists error.
 
-	aws s3 mb s3://class21.k8s.local
+	aws s3 mb s3://tnclass23.k8s.local
 	aws s3 ls
 	
     ex: s3://nubong.k8s.local
@@ -74,8 +77,8 @@ You Created. --> Save.
     vi .bashrc
 	
 	# Give Unique Name And S3 Bucket which you created.
-	export NAME=class21.k8s.local
-	export KOPS_STATE_STORE=s3://class21.k8s.local
+	export NAME=tnclass23.k8s.local
+	export KOPS_STATE_STORE=s3://tnclass23.k8s.local
  
     source .bashrc
 	
